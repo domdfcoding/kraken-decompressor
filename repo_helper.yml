@@ -25,7 +25,9 @@ python_versions:
 
 additional_ignore:
   - "*.whl"
-  - "*.bin"
+  - "old/"
 
 tox_unmanaged:
   - "testenv:.package"
+  - "testenv"
+  - "tox"
