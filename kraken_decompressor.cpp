@@ -4,8 +4,6 @@
 #include <memory>
 #include <vector>
 
-static PyObject *foo(PyObject *self) { return PyUnicode_FromString("bar"); }
-
 static PyObject *decompress(PyObject *self, PyObject *args) {
 	byte *src;
 	Py_ssize_t src_len;
@@ -17,7 +15,7 @@ static PyObject *decompress(PyObject *self, PyObject *args) {
 
 	auto dst = std::make_unique<uint8_t[]>(dst_len);
 
-	printf("src_len=%d, dst_len=%d\n", src_len, dst_len);
+	// printf("src_len=%d, dst_len=%d\n", src_len, dst_len);
 
 	int ret = Kraken_Decompress(src, src_len, dst.get(), dst_len);
 
@@ -50,7 +48,6 @@ static PyObject *decompress(PyObject *self, PyObject *args) {
 }
 
 static PyMethodDef methods[] = {
-	{"foo", (PyCFunction)foo, METH_NOARGS, NULL},
 	{"decompress", (PyCFunction)decompress, METH_VARARGS, NULL},
 	{NULL, NULL, 0, NULL},
 };
