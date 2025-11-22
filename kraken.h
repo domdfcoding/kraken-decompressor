@@ -21,10 +21,12 @@
 #else
 #include <stddef.h>
 #include <x86intrin.h>
-#if defined(__GNUC__) || defined(__clang__) && not defined(__MINGW32__)
+#if defined(__GNUC__) || defined(__clang__)
 // GNU C / Clang supports forcing inline, just via a different syntax.
 // disable this on MinGW compiler
+#if not defined(__MINGW32__)
 #define __forceinline inline __attribute__((always_inline))
+#endif //__MINGW32__
 #else
 // Fall back to the standardized inline keyword for unknown dialects
 #define __forceinline inline
