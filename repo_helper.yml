@@ -12,9 +12,13 @@ short_desc: 'Oodle/Kraken decompressor.'
 enable_conda: false
 enable_docs: false
 enable_tests: false
-use_flit: true
+meson_no_py: true
 
 python_versions:
   "3.10":
   "3.11":
   "3.12":
+
+additional_ignore:
+  - "*.whl"
+  - "*.bin"
