@@ -11,7 +11,6 @@ requires-python = ">=3.10"
 keywords = []
 classifiers = [
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
-    "Operating System :: Microsoft :: Windows",
     "Operating System :: POSIX :: Linux",
     "Programming Language :: Python",
     "Programming Language :: Python :: 3 :: Only",
@@ -42,7 +41,7 @@ Homepage = "https://github.com/domdfcoding/kraken-decompressor"
 base-classifiers = []
 python-versions = [ "3.10", "3.11", "3.12",]
 python-implementations = [ "CPython",]
-platforms = [ "Linux", "Windows",]
+platforms = [ "Linux",]
 license-key = "GPL-3.0-only"
 package = "kraken_decompressor"
 

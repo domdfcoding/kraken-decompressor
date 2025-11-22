@@ -16,7 +16,6 @@ min_coverage: 0  # TODO: measure C++ coverage
 
 platforms:
  - Linux
- - Windows
 
 python_versions:
   "3.10":
