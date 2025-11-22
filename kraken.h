@@ -21,7 +21,7 @@
 #else
 #include <stddef.h>
 #include <x86intrin.h>
-#if defined(__GNUC__) || defined(__clang__)
+#if defined(__GNUC__) || defined(__clang__) && not defined(__MINGW32__)
 // GNU C / Clang supports forcing inline, just via a different syntax.
 // disable this on MinGW compiler
 #define __forceinline inline __attribute__((always_inline))
