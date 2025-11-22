@@ -4,7 +4,7 @@ default_options : ['c_std=c11', 'cpp_std=c++14'])
 py = import('python').find_installation(pure: false)
 
 py.install_sources(
-    ['misc/__init__.py', 'kraken_decompressor.pyi'],
+    ['misc/__init__.py', 'misc/py.typed', 'kraken_decompressor.pyi'],
     subdir: 'kraken_decompressor'
 )
 
