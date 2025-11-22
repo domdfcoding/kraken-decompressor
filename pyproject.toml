@@ -1,0 +1,14 @@
+[build-system]
+build-backend = 'mesonpy'
+requires = ['meson-python']
+
+[project]
+name = 'kraken-decompressor'
+version = '0.0.0'
+description = 'Oodle/Kraken decompressor.'
+requires-python = '>=3.10'
+readme = 'README.md'
+license = {file = 'LICENSE'}
+authors = [{name = 'Powzix'}]
+
+# TODO: classifier for GPLv3
