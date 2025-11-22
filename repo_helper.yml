@@ -11,8 +11,8 @@ short_desc: 'Oodle/Kraken decompressor.'
 
 enable_conda: false
 enable_docs: false
-enable_tests: false
 meson_no_py: true
+min_coverage: 0  # TODO: measure C++ coverage
 
 platforms:
  - Linux
@@ -26,3 +26,6 @@ python_versions:
 additional_ignore:
   - "*.whl"
   - "*.bin"
+
+tox_unmanaged:
+  - "testenv:.package"

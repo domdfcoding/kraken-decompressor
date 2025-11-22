@@ -16,7 +16,7 @@ kraken-decompressor
 	:widths: 10 90
 
 	* - Tests
-	  - |actions_linux| |actions_windows|
+	  - |actions_linux| |actions_windows| |coveralls|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
@@ -45,6 +45,10 @@ kraken-decompressor
 .. |requires| image:: https://dependency-dash.repo-helper.uk/github/domdfcoding/kraken-decompressor/badge.svg
 	:target: https://dependency-dash.repo-helper.uk/github/domdfcoding/kraken-decompressor/
 	:alt: Requirements Status
+
+.. |coveralls| image:: https://img.shields.io/coveralls/github/domdfcoding/kraken-decompressor/master?logo=coveralls
+	:target: https://coveralls.io/github/domdfcoding/kraken-decompressor?branch=master
+	:alt: Coverage
 
 .. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/kraken-decompressor?logo=codefactor
 	:target: https://www.codefactor.io/repository/github/domdfcoding/kraken-decompressor
@@ -104,3 +108,16 @@ To install with ``pip``:
 	$ python -m pip install kraken-decompressor
 
 .. end installation
+
+Usage
+--------------
+
+``kraken-decompressor`` provides a single function, ``decompress``.
+
+.. code-block:: python
+
+	def decompress(src: bytes, dst_len) -> bytes: ...
+
+The function takes two arguments, the compressed data ``src`` (as ``bytes``),
+and the size of the decompressed data ``dst_len`` (as ``int``).
+The function returns the decompressed data as ``bytes``.
