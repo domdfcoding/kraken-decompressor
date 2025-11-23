@@ -30,3 +30,6 @@ tox_unmanaged:
   - "testenv:.package"
   - "testenv"
   - "tox"
+
+exclude_files:
+  - actions
