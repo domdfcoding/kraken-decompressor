@@ -45,7 +45,7 @@ jobs:
     runs-on: "ubuntu-22.04"
     steps:
       - name: Checkout 🛎️
-        uses: "actions/checkout@v4"
+        uses: actions/checkout@v5
 
       - name: Build sdist 📦
         run: pipx run build --sdist
@@ -74,7 +74,11 @@ jobs:
         with:
           user: __token__
           password: ${{ secrets.PYPI_TOKEN }}
-          skip-existing: true
+          skip_existing: true
+
+      - name: Checkout 🛎️
+        uses: actions/checkout@v5
+        if: startsWith(github.ref, 'refs/tags/')
 
       - name: Close milestone 🚪
         if: startsWith(github.ref, 'refs/tags/')
