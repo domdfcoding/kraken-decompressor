@@ -2154,7 +2154,6 @@ bool Kraken_UnpackOffsets(const byte *src, const byte *src_end, const byte *pack
 						  const byte *packed_offs_stream_extra, int packed_offs_stream_size, int multi_dist_scale,
 						  const byte *packed_litlen_stream, int packed_litlen_stream_size, int *offs_stream,
 						  int *len_stream, bool excess_flag, int excess_bytes) {
-
 	BitReader bits_a, bits_b;
 	int n, i;
 	int u32_len_stream_size = 0;
