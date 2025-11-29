@@ -40,11 +40,10 @@ def _append_to_sharedlib_load_path():
 	# https://mesonbuild.com/meson-python/how-to-guides/shared-libraries.html
 
 	basedir = os.path.dirname(__file__)
-	subdir = os.path.join(basedir, "sub")
 	if os.name == "nt":
-		os.add_dll_directory(subdir)
+		os.add_dll_directory(basedir)
 	elif sys.platform == "cygwin":
-		os.environ["PATH"] = os.pathsep.join((os.environ["PATH"], basedir, subdir))
+		os.environ["PATH"] = os.pathsep.join((os.environ["PATH"], basedir))
 
 
 _append_to_sharedlib_load_path()
