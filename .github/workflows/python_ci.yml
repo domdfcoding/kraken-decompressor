@@ -19,7 +19,7 @@ jobs:
   tests:
     name: "windows-2022 / Python ${{ matrix.config.python-version }}"
     runs-on: "windows-2022"
-    continue-on-error: True
+    continue-on-error: ${{ matrix.config.experimental }}
     env:
       USING_COVERAGE: '3.10,3.11,3.12'
 
@@ -65,6 +65,7 @@ jobs:
         run: python -m tox -e "${{ matrix.config.testenvs }}" -s false
 
       - uses: actions/upload-artifact@v4
+        if: ${{ always() }}
         with:
           name: build-artifacts
           path: ./dist/
