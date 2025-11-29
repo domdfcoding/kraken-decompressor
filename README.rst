@@ -16,7 +16,7 @@ kraken-decompressor
 	:widths: 10 90
 
 	* - Tests
-	  - |actions_linux| |coveralls|
+	  - |actions_linux| |actions_windows| |coveralls|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
@@ -29,6 +29,10 @@ kraken-decompressor
 .. |actions_linux| image:: https://github.com/domdfcoding/kraken-decompressor/workflows/Linux/badge.svg
 	:target: https://github.com/domdfcoding/kraken-decompressor/actions?query=workflow%3A%22Linux%22
 	:alt: Linux Test Status
+
+.. |actions_windows| image:: https://github.com/domdfcoding/kraken-decompressor/workflows/Windows/badge.svg
+	:target: https://github.com/domdfcoding/kraken-decompressor/actions?query=workflow%3A%22Windows%22
+	:alt: Windows Test Status
 
 .. |actions_flake8| image:: https://github.com/domdfcoding/kraken-decompressor/workflows/Flake8/badge.svg
 	:target: https://github.com/domdfcoding/kraken-decompressor/actions?query=workflow%3A%22Flake8%22
