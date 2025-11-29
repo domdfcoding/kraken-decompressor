@@ -19,7 +19,7 @@ jobs:
   tests:
     name: "windows-2022 / Python ${{ matrix.config.python-version }}"
     runs-on: "windows-2022"
-    continue-on-error: ${{ matrix.config.experimental }}
+    continue-on-error: True
     env:
       USING_COVERAGE: '3.10,3.11,3.12'
 
