@@ -76,8 +76,5 @@ reformat = true
 
 [tool.snippet-fmt.languages.json]
 
-[tool.cibuildwheel.windows]
-archs = [ "auto64",]
-
 [tool.cibuildwheel.windows.config-settings]
 setup-args = [ "--vsenv",]
