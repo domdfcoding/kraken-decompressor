@@ -20,6 +20,8 @@ jobs:
         include:
           - os: linux-intel
             runs-on: ubuntu-latest
+          - os: windows-intel
+            runs-on: windows-latest
 
     steps:
       - name: Checkout 🛎️
