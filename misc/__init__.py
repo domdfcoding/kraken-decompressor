@@ -1,4 +1,4 @@
-__version__: str = "0.1.0"
+__version__: str = "0.2.0"
 __all__ = ["decompress"]
 
 
