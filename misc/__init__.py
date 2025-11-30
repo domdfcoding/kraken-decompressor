@@ -41,6 +41,7 @@ def _append_to_sharedlib_load_path():
 
 	if "GITHUB_ACTIONS" in os.environ:
 		os.add_dll_directory(r"C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin")
+		os.add_dll_directory(r"C:\mingw64\bin")
 
 
 _append_to_sharedlib_load_path()
