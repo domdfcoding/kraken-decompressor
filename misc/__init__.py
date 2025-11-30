@@ -2,12 +2,6 @@
 import os
 import sys
 
-# this package
-from kraken_decompressor.kraken_decompressor import decompress
-
-__version__: str = "0.1.0"
-__all__ = ["decompress"]
-
 
 def _append_to_sharedlib_load_path():
 	"""
@@ -47,3 +41,9 @@ def _append_to_sharedlib_load_path():
 
 
 _append_to_sharedlib_load_path()
+
+# this package
+from kraken_decompressor.kraken_decompressor import decompress
+
+__version__: str = "0.1.0"
+__all__ = ["decompress"]
