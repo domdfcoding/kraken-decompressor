@@ -16,10 +16,14 @@ jobs:
     name: Build wheels on ${{ matrix.os }}
     runs-on: ${{ matrix.runs-on }}
     strategy:
+      fail-fast: false
       matrix:
         include:
           - os: linux-intel
             runs-on: ubuntu-latest
+          - os: windows-intel
+            runs-on: windows-latest
+            archs: auto64
 
     steps:
       - name: Checkout 🛎️
