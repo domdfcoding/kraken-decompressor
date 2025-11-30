@@ -39,11 +39,12 @@ def _append_to_sharedlib_load_path():
 	elif sys.platform == "cygwin":
 		os.environ["PATH"] = os.pathsep.join((os.environ["PATH"], basedir))
 
-	assert "GITHUB_ACTIONS" in os.environ
-	if "GITHUB_ACTIONS" in os.environ:
-		os.add_dll_directory(r"C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin")
-		os.add_dll_directory(r"C:\mingw64\bin")
-		print("Added mingw to DLL path (GitHub Actions)")
+	if os.name == "nt":
+		if "GITHUB_ACTIONS" in os.environ:
+			for path in {r"C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin", r"C:\mingw64\bin"}:
+				if os.path.exists(path):
+					os.add_dll_directory(path)
+				print("Added mingw to DLL path (GitHub Actions)")
 
 
 _append_to_sharedlib_load_path()
