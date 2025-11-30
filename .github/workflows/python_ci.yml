@@ -59,16 +59,20 @@ jobs:
           python -m site
           python -m pip install --upgrade pip setuptools wheel delvewheel
           python -m pip install --upgrade tox~=3.0 virtualenv!=20.16.0
-          echo "C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin" >> "$GITHUB_PATH"
 
       - name: "Run Tests for Python ${{ matrix.config.python-version }}"
         if: steps.setup-python.outcome == 'success'
+        run: python -m tox -e "${{ matrix.config.testenvs }}" -s false
+
+      - name: "Run delvewheel ${{ matrix.config.python-version }}"
+        if: steps.setup-python.outcome == 'success'
         run: |
-          python -m tox -e "${{ matrix.config.testenvs }}" -s false
           delvewheel show dist/*.whl
+          delvewheel repair dist/*.whl -w wheelhouse
+          cp dist/*.tar.gz wheelhouse/
 
       - uses: actions/upload-artifact@v4
         if: ${{ always() }}
         with:
           name: build-artifacts-${{ matrix.config.python-version }}
-          path: ./dist/
+          path: ./wheelhouse/
