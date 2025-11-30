@@ -1,6 +1,5 @@
-# stdlib
-import os
-import sys
+__version__: str = "0.1.0"
+__all__ = ["decompress"]
 
 
 def _append_to_sharedlib_load_path():
@@ -33,24 +32,25 @@ def _append_to_sharedlib_load_path():
 
 	# https://mesonbuild.com/meson-python/how-to-guides/shared-libraries.html
 
+	# stdlib
+	import os
+	import sys
+
 	basedir = os.path.dirname(__file__)
 	if os.name == "nt":
 		os.add_dll_directory(basedir)
-	elif sys.platform == "cygwin":
-		os.environ["PATH"] = os.pathsep.join((os.environ["PATH"], basedir))
 
-	if os.name == "nt":
 		if "GITHUB_ACTIONS" in os.environ:
 			for path in {r"C:\ProgramData\chocolatey\lib\mingw\tools\install\mingw64\bin", r"C:\mingw64\bin"}:
 				if os.path.exists(path):
 					os.add_dll_directory(path)
 				print("Added mingw to DLL path (GitHub Actions)")
 
+	elif sys.platform == "cygwin":
+		os.environ["PATH"] = os.pathsep.join((os.environ["PATH"], basedir))
+
 
 _append_to_sharedlib_load_path()
 
 # this package
 from kraken_decompressor.kraken_decompressor import decompress
-
-__version__: str = "0.1.0"
-__all__ = ["decompress"]
