@@ -77,7 +77,7 @@ kraken-decompressor
 .. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/kraken-decompressor
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/kraken-decompressor/v0.2.0
+.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/kraken-decompressor/v0.2.1
 	:target: https://github.com/domdfcoding/kraken-decompressor/pulse
 	:alt: GitHub commits since tagged version
 
