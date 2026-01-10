@@ -13,7 +13,7 @@ data_dir = PathPlus(__file__).parent.abspath()
 		[
 				("image.bin", "Hendrik_Voogd_-_Italian_landscape_with_Umbrella_Pines.jpg"),
 				("text.bin", "example_text.txt"),
-				]
+				],
 		)
 def test_decompression(compressed_file: str, reference_file: str):
 	compressed_data = data_dir.joinpath(compressed_file).read_bytes()
