@@ -85,11 +85,11 @@ kraken-decompressor
 	:target: https://github.com/domdfcoding/kraken-decompressor/commit/master
 	:alt: GitHub last commit
 
-.. |maintained| image:: https://img.shields.io/maintenance/yes/2025
+.. |maintained| image:: https://img.shields.io/maintenance/yes/2026
 	:alt: Maintenance
 
 .. |pypi-downloads| image:: https://img.shields.io/pypi/dm/kraken-decompressor
-	:target: https://pypi.org/project/kraken-decompressor/
+	:target: https://pypistats.org/packages/kraken-decompressor
 	:alt: PyPI - Downloads
 
 .. end shields
