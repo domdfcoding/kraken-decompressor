@@ -43,7 +43,7 @@ base-classifiers = []
 python-versions = [ "3.10", "3.11", "3.12",]
 python-implementations = [ "CPython",]
 platforms = [ "Linux", "Windows",]
-license-key = "GPL-3.0-only"
+license-key = "GPLv3"
 package = "kraken_decompressor"
 
 [tool.importcheck]
