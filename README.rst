@@ -116,7 +116,7 @@ Usage
 
 .. code-block:: python
 
-	def decompress(src: bytes, dst_len) -> bytes: ...
+	def decompress(src: bytes, dst_len: int) -> bytes: ...
 
 The function takes two arguments, the compressed data ``src`` (as ``bytes``),
 and the size of the decompressed data ``dst_len`` (as ``int``).
